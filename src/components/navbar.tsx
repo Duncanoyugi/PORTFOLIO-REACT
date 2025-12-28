@@ -121,20 +121,7 @@ export const Navbar = () => {
                     </div>
 
                     {/* Mobile menu button */}
-                    <div className="md:hidden flex items-center space-x-2">
-                        {/* Mobile Theme Toggle */}
-                        <button
-                            onClick={toggleTheme}
-                            className="p-2 rounded-full text-foreground hover:text-primary hover:bg-accent/50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary"
-                            aria-label="Toggle theme"
-                        >
-                            {isDark ? (
-                                <Sun className="h-5 w-5" />
-                            ) : (
-                                <Moon className="h-5 w-5" />
-                            )}
-                        </button>
-
+                    <div className="md:hidden flex items-center">
                         <button
                             onClick={toggleMenu}
                             className="inline-flex items-center justify-center p-2 rounded-md text-foreground hover:text-primary hover:bg-accent/50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary transition-all duration-200"

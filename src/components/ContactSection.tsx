@@ -50,10 +50,10 @@ export const ContactSection = () => {
   return (
     <section id="contact" className="py-16 md:py-24 lg:py-32 px-4 md:px-6 lg:px-8 relative bg-gradient-to-br from-background via-background to-primary/5">
       <div className="container mx-auto max-w-6xl">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-16 text-center">
+          Contact <span className="text-primary">Me</span>
+        </h2>
         <div className="text-center mb-12 md:mb-16">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold mb-4 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent animate-pulse">
-            Contact Me
-          </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Let's connect and discuss opportunities. Reach out through the form or find me on social media.
           </p>
