@@ -12,7 +12,7 @@ export const ContactSection = () => {
   const [submitMessage, setSubmitMessage] = useState('');
 
   // Initialize EmailJS (replace with your actual service ID, template ID, and public key)
-  emailjs.init('your_public_key_here');
+  emailjs.init('cFjLLIevu9vMk0kdP');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -28,8 +28,8 @@ export const ContactSection = () => {
 
     try {
       await emailjs.send(
-        'your_service_id_here', // Replace with your EmailJS service ID
-        'your_template_id_here', // Replace with your EmailJS template ID
+        'service_mu1addk', // Replace with your EmailJS service ID
+        'template_x8u40ar', // Replace with your EmailJS template ID
         {
           from_name: formData.fullName,
           from_email: formData.email,

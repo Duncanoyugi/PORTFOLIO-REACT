@@ -1,32 +1,14 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Sun, Moon } from 'lucide-react';
+import { useTheme } from '../contexts/ThemeContext';
 
 export const Navbar = () => {
+    const { theme, toggleTheme } = useTheme();
     const [isOpen, setIsOpen] = useState(false);
-    const [isDark, setIsDark] = useState(false);
     const [activeSection, setActiveSection] = useState('home');
 
-    useEffect(() => {
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark') {
-            setIsDark(true);
-            document.documentElement.classList.add('dark');
-        } else {
-            localStorage.setItem('theme', 'light');
-            document.documentElement.classList.remove('dark');
-        }
-    }, []);
 
-    useEffect(() => {
-        if (isDark) {
-            document.documentElement.classList.add('dark');
-            localStorage.setItem('theme', 'dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-            localStorage.setItem('theme', 'light');
-        }
-    }, [isDark]);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -55,9 +37,7 @@ export const Navbar = () => {
         setIsOpen(!isOpen);
     };
 
-    const toggleTheme = () => {
-        setIsDark(!isDark);
-    };
+
 
     const handleNavClick = (section: string) => {
         setActiveSection(section);
@@ -112,7 +92,7 @@ export const Navbar = () => {
                             className="p-2 rounded-full text-foreground hover:text-primary hover:bg-accent/50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary"
                             aria-label="Toggle theme"
                         >
-                            {isDark ? (
+                            {theme === 'dark' ? (
                                 <Sun className="h-5 w-5" />
                             ) : (
                                 <Moon className="h-5 w-5" />
