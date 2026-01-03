@@ -12,3 +12,9 @@
 .dark\:border-gray-600 { border-color: rgb(75 85 99); }
 .dark\:hover\:bg-gray-700:hover { background-color: rgb(55 65 81); }
 .dark\:hover\:text-blue-300:hover { color: rgb(147 197 253); }
+
+/* Ensure dark mode is applied to the entire page */
+.dark {
+    background-color: hsl(var(--background)) !important;
+    color: hsl(var(--foreground)) !important;
+}
